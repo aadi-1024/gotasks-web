@@ -5,6 +5,15 @@
     <title>Index</title>
 </head>
 <body>
-    <h1>Gotasks on Web!</h1>
+    <h1>{{.PageTitle}}</h1>
+    <table>
+        {{range .Entries}}
+        <tr>
+            <td>{{.Id}}</td>
+            <td>{{.Name}}</td>
+            <td>{{.Time}}</td>
+        </tr>
+        {{end}}
+    </table>
 </body>
 </html>
